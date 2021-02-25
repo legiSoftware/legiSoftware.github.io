@@ -1,0 +1,152 @@
+<html>
+
+<head>
+<title> Driving licence check </title>
+<style>
+
+.container{
+  display:flex;
+  justify-content: space-around;
+  flex-direction:column;
+  width:300px;
+}
+.row{
+ display:flex;
+  
+}
+.result{
+  display:flex;
+  padding-left:30px;
+  
+}
+#licence{
+  font-weight:bold;
+  color: blue;
+}
+</style>
+<script>
+$(window).load(function() {
+ $("#dob").datepicker();
+
+  
+  check();
+});
+
+function check(){
+  $("#submit").click(function(){
+    var c = initialFirst();
+    var a = verify();
+    var b = dob();
+    var d = a + b + c;
+    $('#licence').text(d.toUpperCase());
+    console.log(d);
+    
+    
+  })
+}
+
+function verify(){
+  var a = "";
+  var lastNameChar= "";
+  var lastName = $("#lastname").val();
+  
+  var countLastName = $("#lastname").val().replace(/ /g,'').length;
+  if(countLastName > 5)
+    {
+     lastNameChar = lastName.substring(0,5);
+     a = lastNameChar;
+     
+    }
+  else
+    {
+      lastNameChar = lastName.substring(0,countLastName);
+      var repeatValue = 5 - countLastName;
+      var fixed = '9';
+      a = lastNameChar + fixed.repeat(repeatValue)
+      
+     }
+  return a;
+}
+
+function dob(){
+  var d="";
+  var dateOfBirth = $('#dob').val();
+  var first = dateOfBirth.substring(8,9);
+  var last = dateOfBirth.substring(9,10);
+  var date = dateOfBirth.substring(3,5);
+  var gender = $("#gender").val();
+  var month = dateOfBirth.substring(0,2);
+  
+  if(gender == "Male"){
+    d = month;
+  }
+  
+  else if(gender == "Female"){
+    var firstChar = month.substring(0,1);
+    
+    if(firstChar == 0){
+    d = month.replace(0,"5");
+    }
+    else if (firstChar == "1"){
+     d = month.replace(1,"6");
+      
+    }
+    
+  }
+  else{
+
+     alert("Gender can't be found");
+  }
+
+  
+   var result = first + d + date + last;
+ return result;
+ 
+  
+}
+
+function initialFirst(){
+  
+  var firstName = $("#firstname").val();
+  var middleName = $("#middlename").val();
+  var initialValue="";
+  var defaultValue = "9";
+  var first = firstName.substring(0,1);
+      if(middleName){
+        
+        var last = middleName.substring(0,1);
+        initialValue = first + last;
+              
+      }
+  else{
+    
+   initialValue =  first + defaultValue.repeat(1);
+   return initialValue;
+    
+}
+  
+}
+</script>
+</head>
+<body>
+<div class="row">
+<div class="container">
+<input type="text" id="firstname" placeholder="First Name"></input>
+<input type="text" id="lastname" placeholder="Last Name"></input>
+<input type="text" id="middlename" placeholder="Middle Name"></input>
+<select id="gender">
+  <option value ="Male" id ="male"> Male</option>
+  <option value ="Female" id ="female"> Female</option>
+  <option value ="Other" id ="other"> Other</option>
+</select>
+<input type="text" id="dob" placeholder="DOB"></input>
+
+<input id="submit" type="submit"></input>
+</div>
+<div class="result">
+ <h3> The first 13 Digits of your licence Number is :  </h3>
+ <h3 id="licence"></h3>
+</div>
+</div>
+</body>
+</html>
