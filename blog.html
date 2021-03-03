@@ -1,0 +1,22 @@
+---
+layout: page
+title: Blog
+permalink: /blog/
+description: software solutions habesha, Tigrinya dictionary, ecommerce developer, website developer, words dictionary, tigrigna language, tigrinya, tigrinya language, habesha software, .NET Developer
+---
+
+<div class="row">
+    <div class="wrapper">
+        <ul class="post-list">
+            {% for post in site.posts %}
+            <li>
+                <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span> 
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+        
+        
+        <br/>  
+    </div>
+</div>
