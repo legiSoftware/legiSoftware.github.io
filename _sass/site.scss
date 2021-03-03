@@ -375,6 +375,12 @@ h2{
     padding:50px;
     display:flex;
     justify-content:space-evenly;
+    @include media-query($on-palm){
+      flex-direction:column;
+    }
+    .app-logo{
+      margin-bottom:10px;
+    }
    
   }
 }
