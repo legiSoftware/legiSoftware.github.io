@@ -41,7 +41,7 @@
 	}
 	.hero-headline{
 		font-family: 'Open Sans';
-	    font-weight: 300;
+	    font-weight: 700;
 	    font-size: 1.5em;
 	    letter-spacing: -1px;
 	    color: #454545;
@@ -439,5 +439,14 @@ h2{
 .app-logo-header{
   padding-top: 16px;
   padding-left: 7px;
+}
+
+/*Blog Page
+=========================================================== */
+.sub-title-image{
+  width:50%;
+}
+.resource-list, .main-title{
+  padding-top:30px;
 }
  
