@@ -393,6 +393,13 @@ h2{
 .medical-dictionary-section{
   background-color:#42277A;
 }
+.medical-dictionary-description{
+  width:562px;
+  @include media-query($on-palm){
+    width:inherit;
+  }
+
+}
 .download-inner-section{
   display:flex;
   @include media-query($on-palm){
