@@ -12,7 +12,7 @@
     .site-header a:hover {color:#fff;}
 
     .site-nav {
-        padding-top: 16px;
+        padding-top: 10px;
         float: right;
         margin-right: 25px;
         text-transform: uppercase;
@@ -73,11 +73,12 @@
 /* Site Footer
  * ============================================== */
     .footer {
-        padding-bottom: 3em;
+        padding: 3em;
         margin: auto;
         font-size: 12px;
         font-family: Open Sans;
-        color: #959595;
+        color: #FFF;
+        background-color:#222;
     }
 
     .footer img {
@@ -147,5 +148,5 @@
     }
 
     .post-content {
-        margin-bottom: $spacing-unit;
+        //margin-bottom: $spacing-unit;
     }

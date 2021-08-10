@@ -9,16 +9,35 @@
       </a>
 
       <div class="trigger">
+        <div class="dropdown">
+          <button class="dropbtn">Apps</button>
+          <div class="dropdown-content">
+       
         {% for page in site.pages %}
-        
           {% if page.title %}
-            {% if page.title != "privacyPolicy" %}
-              <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+            {% if page.title contains "Dictionary" %}
+             <ul>
+              <li> 
+                <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+              </li>
+            </ul>
             {% endif %}
+            
           {% endif %}
         {% endfor %}
+      </div>
+      </div>
+      {% for page in site.pages %}
+      {% if page.title %}
+        {% if page.title contains "Blog" %}
+            <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+        {% endif %}
+        
+      {% endif %}
+    {% endfor %}
       </div>
     </nav>
 
 
 </div>
+

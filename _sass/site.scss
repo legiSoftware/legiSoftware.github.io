@@ -61,7 +61,7 @@
 	    position: relative;
 	    z-index: 1;
 	    padding-top: 52px;
-	    padding-bottom: 25px;
+	    //padding-bottom: 25px;
    }
     .section-headline {
 	    font-size: 32px;
@@ -435,9 +435,10 @@ h2{
   font-size:20px;
   padding: 10px 30px;
 }
-.badge-section{
+.badge-section, .social-media-link-inner-section{
   padding-left:30px;
 }
+
 }
 .main-product-header{
   color:#FFF;
@@ -459,4 +460,103 @@ h2{
 .resource-list, .main-title{
   padding-top:30px;
 }
- 
+/*Medical Dictionary Page
+=========================================================== */
+ .social-media-link{
+   background-color: #EEE;
+ }
+ .media-inner-section {
+  display: flex;
+  justify-content: space-around;
+ a{
+   color:#333;
+   font-size:40px;
+ }
+}
+.social-media-inner-section{
+  padding:20px;
+  .social-media-subheader{
+    text-align:center;
+  }
+  .media-inner-section{
+    padding:20px 0px;
+  }
+}
+.copy-right{
+  text-align:center;
+}
+/*Menu DropDown
+=========================================================== */
+.dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  @include media-query($on-palm){
+    position: inherit;
+  }
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 6px 10px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #2dc3e8;
+  color:white;
+}
+
+.dropdown:hover .dropdown-content 
+{display: block;
+}
+
+.dropdown:hover .dropbtn 
+{
+  background-color: #3e8e41;
+}
+.reviews-section{
+  background-color:#f5f5f7;
+  .reviews{
+    display:flex;
+    padding-left:20px;
+    @include media-query($on-palm){
+      flex-direction: column;
+    }
+  }
+  .review{
+    padding:10px;
+  }
+  .reviewer-pic img{
+    width:346px;
+    height:177px;
+    @include media-query($on-palm){
+      width:inherit;
+      height:inherit;
+    }
+  }
+}
+.reviews-inner-section{
+  padding:20px;
+}
+.align-center{
+  text-align: center;
+  padding:20px;
+}
