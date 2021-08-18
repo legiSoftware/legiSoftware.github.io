@@ -393,8 +393,9 @@ h2{
 .medical-dictionary-section{
   background-color:#42277A;
 }
-.medical-dictionary-description{
+.dictionary-description{
   width:562px;
+  padding-right:20px;
   @include media-query($on-palm){
     width:inherit;
   }
