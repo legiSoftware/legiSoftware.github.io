@@ -3,10 +3,11 @@
 @charset "utf-8";
 
 // Our variables
-$base-font-family: Roboto;
+$base-font-family: 'Raleway', sans-serif;
 $base-font-size:   16px;
 $small-font-size:  $base-font-size * 0.895;
 $large-font-size:  $base-font-size * 1.40;
+
 
 $base-line-height: 1.3446;
 
@@ -25,6 +26,13 @@ $content-width:    1200px;
 $on-palm:          700px;
 $on-laptop:        700px;
 
+/*** VARIABLES ***/
+/* Colors */
+$black: #1d1f20;
+$blue: #83e4e2;
+$green: #a2ed56;
+$yellow: #fddc32;
+$white: #fafafa;
 
 
 // Using media queries with like this:
@@ -39,6 +47,10 @@ $on-laptop:        700px;
         @content;
     }
 }
+
+/*** FONTS ***/
+@import url(https://fonts.googleapis.com/css?family=Montserrat:900|Raleway:400,400i,700,700i);
+
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
