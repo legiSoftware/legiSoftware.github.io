@@ -647,4 +647,21 @@ ol.gradient-list {
     color:#FFF;
   }
 }
+.newsletter-wrap {
+  background: #f78888;
+  padding:60px;
+  margin: 0 auto;
+  /* max-width: 600px; */
+  width: 100%;
+  position: relative;
+  .newsletter-title-wrap, .newsletter-description-wrap {
+    color:#fff;
+    margin: 0 auto;
+    display: table;
+    position: relative;
+ }
+ #mc_embed_signup{
+   background: #f78888;
+ }
+}
 
