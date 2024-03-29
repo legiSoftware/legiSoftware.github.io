@@ -25,6 +25,25 @@ jQuery(document).ready(function(){
 	
 	displayIconOnMobile();
 
+    if (jQuery(window).innerWidth() <= 768) {
+        jQuery(".slider-review").bxSlider({
+            auto: false,
+            autoControls: true,
+            mode: 'fade',
+            slideWidth: 360
+    
+        });
+    }
+    else {
+        jQuery(".slider-review").bxSlider({
+            minSlides: 4,
+            maxSlides: 4,
+            slideWidth: 360,
+            slideMargin: 10
+    
+        });
+    }
+
 
 });
 
